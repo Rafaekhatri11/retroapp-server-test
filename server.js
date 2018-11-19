@@ -7,7 +7,7 @@ const app = express();
  const userRoute= require('./signuproute/signuproute');
 const bodyParser = require("body-parser");
 
-const PORT = 5000 || process.env.PORT;
+const PORT = 3000 || process.env.PORT;
 
 //allow cross-origin  requests
 app.use(cors());
