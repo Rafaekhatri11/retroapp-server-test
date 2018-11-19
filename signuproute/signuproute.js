@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 
 
 router.post('/signup', (req, res, next) => {
-    const body = JSON.parse(req.body.json);
+    const body = req.body;
     createuser.find({ "Email": body.Email })
          .then(user => {
              if (user.length >= 1) {
@@ -66,7 +66,7 @@ router.post('/signup', (req, res, next) => {
  
 
  router.post("/login", (req, res, next) => {
-    const body=JSON.parse(req.body.json);
+    const body= req.body;
     createuser.find({"Email": body.Email }).exec()
         .then(user => {
             console.log('line no 72', user,body)
